@@ -10,5 +10,82 @@
         <h1>
             BINDU SHIVA SAI SRI LAKSHMI KATTABATTULA
         </h1>
+        <h4>VIJAYAWADA</h4>
+        <P><B>Vijayawada</B> is a city in the southeast Indian state of Andhra Pradesh. 
+            It's known for the ornate<b>Kanaka Durga Temple</b> , which sits atop a hill overlooking the city. The Undavalli Caves feature ancient rock-cut temples, carved out of a sandstone hillside and adorned with elaborate statues. The massive Prakasam Barrage stretches across the Krishna River. 
+            Nearby is Bhavani Island, with forests and waterfront gardens</P>
+        <hr>
+        <h4>Directons from maryville to  Vijayawada</h4>
+        <ol>
+            <li>Maryville</li><li>Chicago</li><li>Delhi</li><li>Vijayawada</li>
+        </ol>
+        <ul>
+            <li>Choclates</li><li>clothes</li><li>Toys</li><li>Gift Items</li>
+        </ul>
+        <a href="aboutme.html">Link to aboutme.html page</a>
+        
+        <hr>
+        <h4>About fav food and drinks</h4>
+        <p></p>
+        <table style="border-style: solid;border-collapse:collapse ;">
+            <tr>
+              <th style="border: solid;">Food/drink</th>
+              <th style="border: solid;">location</th>
+              <th style="border: solid;">Amount</th>
+            </tr>
+            <tr>
+              <td style="border: solid;">Pulav</td>
+              <td style="border: solid;">Vijayawada-benzcircle</td>
+              <td style="border: solid;">$30</td>
+            </tr>
+            <tr>
+              <td style="border: solid;">Gulabjam</td>
+              <td style="border: solid;">In my Kitchen</td>
+              <td style="border: solid;">$30</td>
+            </tr>
+            <tr>
+                <td style="border: solid;">Sweet lassi</td>
+                <td style="border: solid;">Sangam_Dairy-Guntur</td>
+                <td style="border: solid;">$5</td>
+            </tr>
+          </table>
+          <hr>
+          <h4>CODE DISPLAY SECTION</h4>
+          <blockquote>
+<P>
+    Given a graph G = (V, E), a matching M in G is a set of pairwise non-adjacent edges, none of which are loops; that is, no two edges share common vertices.
+
+A vertex is matched (or saturated) if it is an endpoint of one of the edges in the matching. Otherwise the vertex is unmatched.
+
+A maximal matching is a matching M of a graph G that is not a subset of any other matching. 
+A matching M of a graph G is maximal if every edge in G has a non-empty intersection with at least one edge in M. </P>
+The following figure shows examples of maximal matchings (red) in three graphs.</blockquote><a href="https://en.wikipedia.org/wiki/Matching_(graph_theory)">link to source code for Matchings/Graph theory</a>
+<pre>
+    vector<vector<int>> adj;  // adjacency list representation
+        int n; // number of nodes
+        int s; // source vertex
+        
+        queue<int> q;
+        vector<bool> used(n);
+        vector<int> d(n), p(n);
+        
+        q.push(s);
+        used[s] = true;
+        p[s] = -1;
+        while (!q.empty()) {
+            int v = q.front();
+            q.pop();
+            for (int u : adj[v]) {
+                if (!used[u]) {
+                    used[u] = true;
+                    q.push(u);
+                    d[u] = d[v] + 1;
+                    p[u] = v;
+                }
+            }
+        }
+</pre>
+<a href="https://cp-algorithms.com/graph/breadth-first-search.html">Quick link to source code</a>
     </body>
-        </html>
+
+</html>
